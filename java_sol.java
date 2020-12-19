@@ -17,6 +17,7 @@ public class Main {
 		Solver() {
 			int n=in.nextInt();
 			int l=0, r=0;
+			//count the number of zeroes in the left and right door
 			for(int i=0; i<n; ++i) {
 				int a=in.nextInt(), b=in.nextInt();
 				if(a==0)
@@ -24,6 +25,7 @@ public class Main {
 				if(b==0)
 					r++;
 			}
+			//find the sum of the minimum open/closed doors between the left and the right door
 			out.println(Math.min(l, n-l)+Math.min(r, n-r));
 		}
 	}
