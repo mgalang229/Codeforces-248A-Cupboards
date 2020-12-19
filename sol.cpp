@@ -11,6 +11,7 @@ int main() {
 	int n;
 	cin >> n;
 	int l=0, r=0;
+	//count the number of zeros in both left and right doors
 	for(int i=0; i<n; ++i) {
 		int a, b;
 		cin >> a >> b;
@@ -19,5 +20,6 @@ int main() {
 		if(b==0)
 			r++;
 	}
+	//find the sum of the minimum open/closed doors between the left and the right door
 	cout << min(l, n-l)+min(r, n-r) << "\n";
 }
